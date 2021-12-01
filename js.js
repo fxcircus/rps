@@ -9,13 +9,15 @@ const computer = {
 let newGame = (playerSelection) => {
   
   player.playerChoice = choices[playerSelection];
-  playerDisplay.append(player.playerChoice + " ");
+  //playerDisplay.append(player.playerChoice + " ");
+  playerDisplay.innerText = player.playerChoice;
   
   computer.computerChoice = choices[computerChooses()];
-  compDisplay.append(computer.computerChoice + " ");
+  //compDisplay.append(computer.computerChoice + " ");
+  compDisplay.innerText = computer.computerChoice;
   
-  resultDisplay.append(compareChoices() + " ");
-  compareChoices();
+  resultDisplay.innerText = compareChoices();
+  //compareChoices();
 }
 
 let computerChooses = () => {
@@ -57,11 +59,10 @@ const compareChoices = () => {
 
 const choices = ["Lapis","Papyrus","Scalpellus"];
 
-let compDisplay = document.querySelector(".computerSelect");
-let playerDisplay = document.querySelector(".playerSelect");
-let resultDisplay = document.querySelector(".result");
+let compDisplay = document.getElementById("computerSelect");
+let playerDisplay = document.getElementById("playerSelect");
+let resultDisplay = document.getElementById("result");
 
 document.getElementById("lapis").addEventListener('click', function(){newGame(0)});
 document.getElementById("papyrus").addEventListener('click', function(){newGame(1)});
-
 document.getElementById("scalpellus").addEventListener('click',function(){newGame(2)});
