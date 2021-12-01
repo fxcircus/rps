@@ -1,1 +1,2 @@
-# rps
+# Rock Paper Scissors
+# (Lapis << Papyrus << Scalpellus)
